@@ -1,0 +1,1 @@
+sass --watch "C:\Users\Admin\Dropbox\Farhan Firoz\Sysnetic\assets\scss\main.scss":"C:\Users\Admin\Dropbox\Farhan Firoz\Sysnetic\assets\css\style.css"
