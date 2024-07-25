@@ -2024,7 +2024,7 @@ Main Header
   display: block;
 }
 .main-header .logo img {
-  max-width: 100%;
+  max-width: 200px;
   height: auto;
 }
 .main-header .main-box {
@@ -2103,7 +2103,7 @@ Main Header
   text-align: center;
   opacity: 1;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 30px;
   font-weight: 500;
   padding: 0;
@@ -2436,7 +2436,7 @@ Header Style One
   padding: 0 80px;
 }
 .header-style-two .header-lower .logo-box {
-  padding: 38px 0;
+  padding: 25px 0;
   margin-right: 30px;
 }
 .header-style-two .main-box {
@@ -2458,7 +2458,7 @@ Header Style One
   color: #6a6a6a;
 }
 .header-style-two .main-menu .navigation > li > a {
-  color: #6a6a6a;
+  color: #060606;
 }
 
 /*** 
@@ -2559,7 +2559,7 @@ Sticky Header
 }
 
 .sticky-header .main-menu .navigation > li > a {
-  color: #707070;
+  color: #060606;
 }
 
 .sticky-header .main-menu .navigation > li.current > a,
@@ -3318,7 +3318,6 @@ Section Title
 ***/
 .about-section {
   position: relative;
-  padding: 120px 0 70px;
 }
 .about-section::before {
   position: absolute;
@@ -7783,9 +7782,9 @@ Section Title
 .clients-section .slide-item img {
   display: inline-block;
   max-width: 100%;
-  width: auto;
+  width: 60px;
   height: auto;
-  opacity: 0.3;
+  /* opacity: 0.3; */
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -10036,27 +10035,18 @@ Page Title
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 230px 0 110px;
+  padding: 50px 0 0px;
   min-height: 250px;
 }
 @media only screen and (max-width: 768px) {
   .page-title {
-    padding: 200px 0 110px;
+    padding: 50px 0 0px;
+    min-height: 200px;
   }
 }
-.page-title:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: #131313;
-  opacity: 0.8;
-  content: "";
-}
 .page-title .title {
-  font-size: 64px;
-  color: #ffffff;
+  font-size: 46px;
+  color: #060606;
   margin-bottom: 17px;
 }
 .page-title .text {
@@ -10077,7 +10067,7 @@ Page Title
   display: inline-block;
   margin-right: 12px;
   padding-right: 13px;
-  color: #ffffff;
+  color: #ff3838;
   font-size: 14px;
   font-weight: 400;
   text-transform: capitalize;
@@ -10091,7 +10081,7 @@ Page Title
   font-size: 14px;
   font-weight: 900;
   font-family: "Font Awesome 6 Pro";
-  color: #ffffff;
+  color: #060606;
 }
 .page-breadcrumb li:last-child {
   padding-right: 0px;
@@ -10101,7 +10091,7 @@ Page Title
   display: none;
 }
 .page-breadcrumb li a {
-  color: var(--theme-color2);
+  color: #060606;
   font-weight: 500;
   text-transform: capitalize;
   transition: all 0.3s ease;
@@ -10111,7 +10101,7 @@ Page Title
   -o-transition: all 0.3s ease;
 }
 .page-breadcrumb li a:hover {
-  color: #ffffff;
+  color: #080808;
 }
 
 .page-title.style-two {
@@ -12271,7 +12261,7 @@ Sidebar
 .main-footer .about-widget .text {
   font-size: 15px;
   line-height: 30px;
-  color: #8f8f8f;
+  color: #d0d0d0;
   margin-bottom: 20px;
 }
 .main-footer .about-widget .contact-info {
@@ -12337,7 +12327,7 @@ Sidebar
 .user-links li a {
   position: relative;
   display: inline-block;
-  color: inherit;
+  color: #d0d0d0;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
@@ -12437,7 +12427,7 @@ Sidebar
   padding-left: 30px;
 }
 .contacts-widget .text {
-  color: #8f8f8f;
+  color: #d0d0d0;
   margin-bottom: 20px;
 }
 .contacts-widget .contact-info {
@@ -12528,7 +12518,7 @@ Sidebar
 }
 .footer-bottom .copyright-text {
   position: relative;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 30px;
   color: #8f8f8f;
 }

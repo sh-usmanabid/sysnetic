@@ -510,26 +510,28 @@ var THEMEMASCOT = {};
 		$('.clients-carousel').owlCarousel({
 			rtl: THEMEMASCOT.isRTL.check(),
 			loop: true,
-			margin: 10,
+			margin: 0,
 			nav: false,
 			smartSpeed: 400,
 			autoplay: true,
+			autoplayTimeout: 1,
+			slideTransition: 'linear',
 			navText: ['<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>'],
 			responsive: {
 				0: {
-					items: 1
-				},
-				480: {
 					items: 2
 				},
-				600: {
-					items: 3
-				},
-				768: {
+				480: {
 					items: 4
 				},
-				1023: {
+				600: {
+					items: 4
+				},
+				768: {
 					items: 5
+				},
+				1023: {
+					items: 7
 				},
 			}
 		});
@@ -697,30 +699,30 @@ var THEMEMASCOT = {};
   /* ---------------------------------------------------------------------- */
   /* ----------- Activate Menu Item on Reaching Different Sections ---------- */
   /* ---------------------------------------------------------------------- */
-  var $onepage_nav = $('.onepage-nav');
-  var $sections = $('section');
-  var $window = $(window);
-  function TM_activateMenuItemOnReach() {
-	  if( $onepage_nav.length > 0 ) {
-	    var cur_pos = $window.scrollTop() + 2;
-	    var nav_height = $onepage_nav.outerHeight();
-	    $sections.each(function() {
-	      var top = $(this).offset().top - nav_height - 80,
-	        bottom = top + $(this).outerHeight();
+//   var $onepage_nav = $('.onepage-nav');
+//   var $sections = $('section');
+//   var $window = $(window);
+//   function TM_activateMenuItemOnReach() {
+// 	  if( $onepage_nav.length > 0 ) {
+// 	    var cur_pos = $window.scrollTop() + 2;
+// 	    var nav_height = $onepage_nav.outerHeight();
+// 	    $sections.each(function() {
+// 	      var top = $(this).offset().top - nav_height - 80,
+// 	        bottom = top + $(this).outerHeight();
 
-	      if (cur_pos >= top && cur_pos <= bottom) {
-	        $onepage_nav.find('a').parent().removeClass('current').removeClass('active');
-	        $sections.removeClass('current').removeClass('active');
-	        $onepage_nav.find('a[href="#' + $(this).attr('id') + '"]').parent().addClass('current').addClass('active');
-	      }
+// 	      if (cur_pos >= top && cur_pos <= bottom) {
+// 	        $onepage_nav.find('a').parent().removeClass('current').removeClass('active');
+// 	        $sections.removeClass('current').removeClass('active');
+// 	        $onepage_nav.find('a[href="#' + $(this).attr('id') + '"]').parent().addClass('current').addClass('active');
+// 	      }
 
-	      if (cur_pos <= nav_height && cur_pos >= 0) {
-	        $onepage_nav.find('a').parent().removeClass('current').removeClass('active');
-	        $onepage_nav.find('a[href="#header"]').parent().addClass('current').addClass('active');
-	      }
-	    });
-	  }
-	}
+// 	      if (cur_pos <= nav_height && cur_pos >= 0) {
+// 	        $onepage_nav.find('a').parent().removeClass('current').removeClass('active');
+// 	        $onepage_nav.find('a[href="#header"]').parent().addClass('current').addClass('active');
+// 	      }
+// 	    });
+// 	  }
+// 	}
 	
 /* ==========================================================================
    When document is Scrollig, do
