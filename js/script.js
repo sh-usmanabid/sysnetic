@@ -467,6 +467,7 @@ var THEMEMASCOT = {};
 			items: 1,
 			smartSpeed: 700,
 			autoplay: 5000,
+			dots: false,
 			navText: ['<span class="flaticon-left-chevron"></span>', '<span class="flaticon-right-chevron"></span>'],
 			responsive: {
 				0: {
@@ -511,11 +512,13 @@ var THEMEMASCOT = {};
 			rtl: THEMEMASCOT.isRTL.check(),
 			loop: true,
 			margin: 0,
-			nav: false,
-			smartSpeed: 400,
 			autoplay: true,
-			autoplayTimeout: 1,
-			slideTransition: 'linear',
+			autoplayTimeout: 1000, // Very short timeout for continuous effect
+			autoplaySpeed: 16000, // Remove delay between slides
+			smartSpeed: 8000, // Duration for smooth transition
+			autoplayHoverPause: false, // Keep it moving even on hover
+			// slideBy: 1, // Move one item at a time for smoothness
+			nav: false,  // Keep it moving even on hover
 			navText: ['<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>'],
 			responsive: {
 				0: {
@@ -750,3 +753,22 @@ var THEMEMASCOT = {};
 	});	
 
 })(window.jQuery);
+
+document.addEventListener('DOMContentLoaded', function() {
+	const logosSlides = document.querySelectorAll('.logos-slide');
+
+	logosSlides.forEach(slide => {
+		const images = slide.querySelectorAll('img');
+		let totalWidth = 0;
+		
+		images.forEach(img => {
+			const imgStyles = window.getComputedStyle(img);
+			const marginLeft = parseFloat(imgStyles.marginLeft);
+			const marginRight = parseFloat(imgStyles.marginRight);
+			const imgWidth = img.offsetWidth;
+			totalWidth += imgWidth + marginLeft + marginRight;
+		});
+
+		slide.style.width = totalWidth + 'px';
+	});
+});
