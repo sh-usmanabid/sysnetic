@@ -1132,6 +1132,11 @@
 	}
 }
 
+@media only screen and (max-width: 500px){
+	.contact-details__info li .icon img{
+		width: 40px;
+	}
+}
 
 @media only screen and (max-width: 424px){
 	.main-slider h1 {
@@ -1153,10 +1158,13 @@
 		display: inline-flex;
 		margin-bottom: 20px;
 	}
+	.feature-block .custom-icon{
+		position: relative;
+		display: inline-flex;
+		margin-bottom: 20px;
+	}
 
 	.testimonial-block-two .icon-quote{
 		display: none;
 	}
-
-
 }
