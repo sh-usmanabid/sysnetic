@@ -79,9 +79,9 @@
 		padding-right: 30px;
 	}
 
-	.projects-section.style-two .owl-nav{
+	/* .projects-section.style-two .owl-nav{
 		right: 0;
-	}
+	} */
 
 	.work-section-two .content-column .inner-column{
 		padding-left: 30px;
@@ -428,7 +428,7 @@
 	}
 
 	.header-style-two .mobile-nav-toggler{
-		color: var(--theme-color2)
+		color:#00224d;
 	}
 
 	.header-style-two .container-fluid{
@@ -661,7 +661,7 @@
 	}
 
 	.header-style-three .mobile-nav-toggler{
-		color: #ff1f4d;
+		color: #00224d;
 	}
 
 	.main-header .ui-btn{

@@ -2418,7 +2418,7 @@ Header Style One
 ***/
 .header-style-two {
   position: relative;
-  background-color: #fff;
+  background-color: #f6f6f6;
   z-index: 9;
 }
 .header-style-two .header-top {
@@ -2866,6 +2866,7 @@ Section Title
   position: relative;
   margin-bottom: 50px;
   z-index: 2;
+  padding-right: 30px;
 }
 .sec-title .sub-title {
   position: relative;
@@ -4238,7 +4239,7 @@ Section Title
   transition: all 300ms ease;
 }
 .service-block-three .inner-box:hover {
-  background-color: var(--bg-theme-color2);
+  /* background-color: var(--bg-theme-color2); */
 }
 .service-block-three .inner-box:hover .text,
 .service-block-three .inner-box:hover .title,
@@ -4733,7 +4734,7 @@ Section Title
 
 .testimonial-block {
   position: relative;
-  padding: 60px 0 0;
+  padding: 80px;
 }
 .testimonial-block .inner-box {
   position: relative;

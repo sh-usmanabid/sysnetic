@@ -406,7 +406,7 @@ var THEMEMASCOT = {};
 			nav: false,
 			smartSpeed: 400,
 			autoplay: true,
-			navText: ['<span class="fa fa-long-arrow-alt-left"></span>', '<span class="fa fa-long-arrow-alt-right"></span>'],
+			//navText: ['<span class="fa fa-long-arrow-alt-left"></span>', '<span class="fa fa-long-arrow-alt-right"></span>'],
 			responsive: {
 				0: {
 					items: 1
@@ -415,13 +415,13 @@ var THEMEMASCOT = {};
 					items: 1
 				},
 				767: {
-					items: 2
+					items: 1
 				},
 				1023: {
-					items: 3
+					items: 1
 				},
 				1200: {
-					items: 4
+					items: 1
 				}
 			}
 		});
@@ -433,10 +433,10 @@ var THEMEMASCOT = {};
 			rtl: THEMEMASCOT.isRTL.check(),
 			loop: true,
 			margin: 30,
-			nav: true,
+			nav: false,
 			smartSpeed: 400,
 			autoplay: true,
-			navText: ['<span class="fa fa-long-arrow-alt-left"></span>', '<span class="fa fa-long-arrow-alt-right"></span>'],
+			navText: [,],
 			responsive: {
 				0: {
 					items: 1
@@ -445,40 +445,65 @@ var THEMEMASCOT = {};
 					items: 1
 				},
 				767: {
-					items: 2
+					items: 1
 				},
 				1023: {
-					items: 3
+					items: 1
 				},
 				1400: {
-					items: 4
+					items: 2
 				}
 			}
+		});
+		
+		// Custom navigation controls functionality
+		$('.owl-prev').click(function() {
+			$('.projects-carousel-two').trigger('prev.owl.carousel');
+		});
+
+		$('.owl-next').click(function() {
+			$('.projects-carousel-two').trigger('next.owl.carousel');
 		});
 	}
 
 	// Testimonial Carousel
-	if ($('.testimonial-carousel').length) {
-		$('.testimonial-carousel').owlCarousel({
-			rtl: THEMEMASCOT.isRTL.check(),
-			loop: true,
-			margin: 30,
-			nav: false,
-			items: 1,
-			smartSpeed: 700,
-			autoplay: 5000,
-			dots: false,
-			navText: ['<span class="flaticon-left-chevron"></span>', '<span class="flaticon-right-chevron"></span>'],
-			responsive: {
-				0: {
-					items: 1
-				},
-				991: {
-					items: 2
-				},
-			}
-		});
-	}
+	$(document).ready(function() {
+		if ($('.testimonial-carousel').length) {
+			$('.testimonial-carousel').owlCarousel({
+				// margin:30,
+				// rtl: THEMEMASCOT.isRTL && THEMEMASCOT.isRTL.check(), // Ensure THEMEMASCOT is defined if used
+				loop: true,
+				// center:true,
+				nav: false,
+				smartSpeed: 700,
+				autoplay: 5000,
+				dots: false,
+				
+				navText: ['<span class="flaticon-left-chevron"></span>', '<span class="flaticon-right-chevron"></span>'],
+				responsive: {
+					0: {
+						items: 1,
+						stagePadding: 20
+					},
+					576: {
+						items: 1,
+						stagePadding: 50
+
+					},
+					992: {
+						items: 2,
+						//stagePadding: 50
+
+					},
+					1200:{
+						items:2,
+						// stagePadding: 100
+					}
+				}
+			});
+		}
+	});
+	
 
 	// Testimonial Carousel Two
 	if ($('.testimonial-carousel-two').length) {
@@ -772,3 +797,67 @@ document.addEventListener('DOMContentLoaded', function() {
 		slide.style.width = totalWidth + 'px';
 	});
 });
+
+$(document).ready(function() {
+	// Define all tech stack items
+	const allTechStack = [
+		{ imageSrc: "images/resource/1.png", alt: "Nuxt JS", name: "Nuxt JS", category: "frontend" },
+		{ imageSrc: "images/resource/2.png", alt: "Firebase", name: "Firebase", category: "backend" },
+		{ imageSrc: "images/resource/3.png", alt: "Flutter", name: "Flutter", category: "mobile" },
+		{ imageSrc: "images/resource/4.png", alt: "Laravel", name: "Laravel", category: "backend" },
+		{ imageSrc: "images/resource/5.png", alt: "MongoDB", name: "MongoDB", category: "database" },
+		{ imageSrc: "images/resource/6.png", alt: "Node JS", name: "Node JS", category: "backend" },
+		{ imageSrc: "images/resource/7.png", alt: "Vue JS", name: "Vue JS", category: "frontend" },
+		{ imageSrc: "images/resource/8.png", alt: "React JS", name: "React JS", category: "frontend" },
+		{ imageSrc: "images/resource/9.png", alt: "AWS", name: "AWS", category: "cloud" },
+		{ imageSrc: "images/resource/10.png", alt: "Nest JS", name: "Nest JS", category: "backend" },
+		{ imageSrc: "images/resource/11.png", alt: "PostgreSQL", name: "PostgreSQL", category: "database" },
+		{ imageSrc: "images/resource/13.png", alt: "Express JS", name: "Express JS", category: "backend" },
+		{ imageSrc: "images/resource/14.png", alt: "Adonis JS", name: "Adonis JS", category: "backend" },
+		{ imageSrc: "images/resource/15.png", alt: "Typescript", name: "Typescript", category: "frontend" },
+		{ imageSrc: "images/resource/16.png", alt: "GraphSQL", name: "GraphQL", category: "database" },
+		{ imageSrc: "images/resource/17.png", alt: "MySQL", name: "MySQL", category: "database" },
+		{ imageSrc: "images/resource/18.png", alt: "TypeORM", name: "TypeORM", category: "backend" },
+		{ imageSrc: "images/resource/19.png", alt: "Prism ORM", name: "Prism ORM", category: "backend" },
+		{ imageSrc: "images/resource/20.png", alt: "Knex JS", name: "Knex JS", category: "backend" },
+		{ imageSrc: "images/resource/21.png", alt: "Sequelize", name: "Sequelize", category: "backend" },
+		{ imageSrc: "images/resource/22.png", alt: "Next JS", name: "Next JS", category: "frontend" },
+		{ imageSrc: "images/resource/23.png", alt: "Gatsby", name: "Gatsby", category: "frontend" },
+		{ imageSrc: "images/resource/24.png", alt: "Angular", name: "Angular", category: "frontend" },
+		{ imageSrc: "images/resource/25.png", alt: "Tailwind CSS", name: "Tailwind CSS", category: "frontend" },
+		{ imageSrc: "images/resource/26.png", alt: "Bootstrap", name: "Bootstrap", category: "frontend" },
+		{ imageSrc: "images/resource/27.png", alt: "PHP", name: "PHP", category: "backend" },
+		{ imageSrc: "images/resource/28.png", alt: "SASS", name: "SASS", category: "frontend" },
+		{ imageSrc: "images/resource/29.png", alt: "CodeIgniter", name: "CodeIgniter", category: "backend" },
+		{ imageSrc: "images/resource/30.png", alt: "Kubernetes", name: "Kubernetes", category: "cloud" },
+		{ imageSrc: "images/resource/31.png", alt: "Docker", name: "Docker", category: "cloud" },
+		{ imageSrc: "images/resource/32.png", alt: "Swift", name: "Swift", category: "mobile" },
+		{ imageSrc: "images/resource/33.png", alt: "Kotlin", name: "Kotlin", category: "mobile" },
+		{ imageSrc: "images/resource/34.png", alt: "Ionic", name: "Ionic", category: "mobile" },
+		{ imageSrc: "images/resource/35.png", alt: "Azure", name: "Azure", category: "cloud" }
+	];
+
+	$('.category-button').click(function() {
+		const category = $(this).data('category');
+		$('.tech-stack').empty();
+
+		// Highlight the active button
+        $('.category-button').removeClass('active'); // Remove 'active' class from all buttons
+        $(this).addClass('active'); // Add 'active' class to the clicked button
+		
+		// Filter the tech stack based on the selected category
+		const techStackData = category === 'all' ? allTechStack : allTechStack.filter(item => item.category === category);
+
+		// Populate the tech stack items
+		techStackData.forEach(item => {
+			const techStackItem = $('<div class="tech-stack-item">');
+			techStackItem.append($('<img>').attr('src', item.imageSrc).attr('alt', item.alt));
+			techStackItem.append($('<div>').text(item.name));
+			$('.tech-stack').append(techStackItem);
+		});
+	});
+
+	// Trigger the 'All' category by default
+	$('.category-button[data-category="all"]').trigger('click');
+});
+
