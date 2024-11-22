@@ -2114,7 +2114,7 @@ Main Header
   text-align: center;
   opacity: 1;
   color: #ffffff;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   padding: 0;
@@ -11003,10 +11003,12 @@ Page Title
 --------------------------------------------------------------*/
 .project-details__img {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .project-details__img img {
-  width: 100%;
+  width: 90%;
   border-radius: 10px;
 }
 
@@ -11018,7 +11020,7 @@ Page Title
 .project-details__content-left {
   position: relative;
   display: block;
-  margin-top: 31px;
+  margin-top: 50px;
 }
 
 .project-details__content-right {
@@ -11067,6 +11069,14 @@ Page Title
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+          justify-content: start;
+}
+.project-details__social img {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  margin-right: 20px;
 }
 .project-details__social a {
   position: relative;
@@ -11105,8 +11115,8 @@ Page Title
   text-align: center;
   border-top: 1px solid #ece9e0;
   border-bottom: 1px solid #ece9e0;
-  padding: 30px 0;
-  margin-top: 117px;
+  padding: 30px 0 60px;
+  margin-top: 60px;
 }
 
 .project-details__pagination {
@@ -12393,7 +12403,7 @@ Sidebar
   margin-bottom: 25px;
 }
 .main-footer .about-widget .text {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 30px;
   color: #d0d0d0;
   margin-bottom: 20px;
@@ -12850,9 +12860,9 @@ height: 360px;
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease;
     background-color: #ffffff00; 
-    padding: 20px;
+    padding: 12px;
     color: white;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
   }
 
@@ -12863,3 +12873,21 @@ height: 360px;
   .category-button:hover {
     border-color: var(--theme-color2);
   }
+.portfolio-paragraph,
+.portfolio-list1,
+.portfolio-list2{
+  font-size: 18px;
+}
+.portfolio-img{
+width: 100%;
+display: block;
+margin-top: 40px;
+}
+.portfolio-list1 i{
+  color:#ff1f4D;
+  margin-right: 10px;
+}
+.portfolio-list2 i{
+  color:#00224D;
+  margin-right: 10px;
+}
