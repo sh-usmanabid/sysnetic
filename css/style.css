@@ -11008,7 +11008,7 @@ Page Title
   align-items: center;
 }
 .project-details__img img {
-  width: 90%;
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -11021,6 +11021,7 @@ Page Title
   position: relative;
   display: block;
   margin-top: 50px;
+  color:#00224D;
 }
 
 .project-details__content-right {
@@ -11057,6 +11058,7 @@ Page Title
 }
 
 .project-details__name {
+  color:#00224d;
   font-size: 16px;
   line-height: 24px;
 }
@@ -12877,6 +12879,9 @@ height: 360px;
 .portfolio-list1,
 .portfolio-list2{
   font-size: 18px;
+}
+.portfolio-paragraph{
+  color:#00224d
 }
 .portfolio-img{
 width: 100%;
